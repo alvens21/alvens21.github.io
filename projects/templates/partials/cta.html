@@ -1,0 +1,46 @@
+<section id="contact-section" class="cta-section">
+    <div class="row">
+        <div class="container contact-info">
+            <h2>Get in touch with us</h2>
+            <ul class="contact-details">
+                <li class="phone"><i class="fa-solid fa-phone"></i><a href="tel:09279840471">+63927-984-0471</a></li>
+                <li class="email"><i class="fa-solid fa-envelope"></i><a href="mailto:oblefiasalven@gmail.com">oblefiasalven@gmail.com</a></li>
+                <li class="address"><i class="fa-solid fa-location-dot"></i>City of San Jose Del Monte, Bulacan, Philippines</li>
+            </ul>
+            <h3>Connect With Us</h3>
+            <ul class="social-icon">
+                <li class="fb-icon"><i class="fa-brands fa-facebook-f"></i><a href="https://www.facebook.com/erick.billamore.7" target="_blank">FB</a></li>
+                <li class="ig-icon"><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/alvenoblfs/" target="_blank">IG</a></li>
+                <li class="linkedin"><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/alven-oblefias-3204b7112/" target="_blank">IN</a></li>
+            </ul>
+        </div>
+        <div class="container contact-form">
+            <p>Ready to start your next project? Send me your ideas and I’ll get back to you shortly.</p>
+            <form method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                    
+                <div>
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                </div>
+                    
+                <div>
+                    {{ form.phone.label_tag }}
+                    {{ form.phone }}
+                </div>
+                    
+                <div>
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                </div>
+                    
+                <div>
+                    {{ form.message.label_tag }}
+                    {{ form.message }}
+                </div>
+                    
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
