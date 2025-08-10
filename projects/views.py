@@ -7,7 +7,7 @@ from .models import Project
 def project_list(request):
     projects = Project.objects.all()
     form = ContactForm()  # para available kapag include ang partial sa list page
-    return render(request, 'projects/list.html', {
+    return render(request, 'projects/index.html', {
         'projects': projects,
         'form': form,
     })
